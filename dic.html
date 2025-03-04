@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Bookly
+        </a>
+        <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="dic.html">Dictionary</a></li>
+            <li><a href="#hi">Quote</a></li>
+            <li><a href="tips.html">Tips</a></li>
+           
+        </ul>
+    </header>
+    <br><br><br><br>
+    <section>
+    <div class="headdd">
+       <h1 class="hh"> "Step into the world of words-your dictionnary awaits below"</h1>
+       <img src="18883423.png" alt="" class="step1">
+       <img src="18883423.png" alt="" class="step2">
+       <img src="18883423.png" alt="" class="step3">
+       <img src="18883423.png" alt="" class="step4">
+       <img src="18883423.png" alt="" class="step5">
+    </div>
+    </section>
+    <br><br><br><br>
+    <section class="body" id="dicc">
+        <div class="floating-icons">
+            <img src="https://cdn-icons-png.flaticon.com/128/3330/3330314.png" alt="Laptop" class="icon1">
+            <img src="https://cdn-icons-png.flaticon.com/128/3389/3389081.png" alt="Coffee Cup" class="icon2">
+            <img src="https://cdn-icons-png.flaticon.com/128/3771/3771417.png" alt="Keyboard" class="icon3">
+            <img src="https://cdn-icons-png.flaticon.com/128/10221/10221707.png" alt="Keyboard" class="icon4">
+            <img src="https://cdn-icons-png.flaticon.com/128/3227/3227053.png" alt="Keyboard" class="icon6">
+            <img src="https://cdn-icons-png.flaticon.com/128/3627/3627782.png" alt="Keyboard" class="icon7">
+            <img src="https://cdn-icons-png.flaticon.com/128/2702/2702184.png" alt="Keyboard" class="icon8">
+       
+            <img src="https://cdn-icons-png.flaticon.com/128/18830/18830194.png" alt="Keyboard" class="icon10">
+           
+        </div> 
+       <audio id="sound"></audio>
+        <div class="container">
+        <div class="search-box">
+            <input 
+            type="text"
+            placeholder="Type the word here.."
+            id="inp-word"
+            >
+            <button id="search-btn">Search</button>
+        </div>
+        <div class="result" id="result"></div>
+       </div>
+    </section> 
+    <section class="hi" id="hi">
+    <div class="containir quoteArea">
+        <div>
+        <div class="ribbon ribbon-top-left">
+            <span id="category">category</span>
+        </div>
+        <h2>Quote of the day</h2>
+    <div class="quote"></div>
+   <div class="buttons">
+      <div class="icons">
+        <i class="fa-regular fa-heart" id="likeQuote" onclick="LikeQuote()"></i>
+        <i class="fa-solid fa-list" id="likeList"></i>
+        <i class="fa-regular fa-copy" onclick="CopyQuote()"></i>
+    
+      </div>
+      <button id="generate" onclick="generateQuotes()">New Quote</button>
+     </div>
+   </div>
+    
+
+
+
+    </div>
+    <div class="containir favoriteList">
+      <h2>Favorite Quote List</h2>
+      <i class="fa-solid fa-arrow-left-long" onclick="switchQuotes()"></i>
+      <ul class="favoriteData"></ul>
+      <i class="fa-solid fa-broom" onclick="clearFavoriteList()"></i>
+    </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="copyright">
+        <p>Copyright © 2024 ORCHiD -All Rights Reserved</p>
+    </div>
+    
+</footer>
+    <a href="https://wa.me/96171402747" target="_blank" 
+style="position: fixed; bottom: 20px; right: 20px; background-color: #25D366; 
+color: white; border-radius: 50%; width: 60px; height: 60px; display: flex; 
+align-items: center; justify-content: center; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+z-index: 1000;">
+ <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
+      alt="WhatsApp" style="width: 35px; height: 35px;">
+</a> 
+<script src="quote.js"></script>      
+<script src="script.js"></script>
+   
+
+</body>
+</html>

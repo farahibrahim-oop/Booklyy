@@ -1,0 +1,563 @@
+
+.containerr{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    
+    
+
+}
+
+  .copyright{
+    color: rgb(0, 0, 0);
+  }
+  .copyright{
+    background-color: rgba(185, 174, 210, 0.747);
+    padding: 1px;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: 20px;
+  }
+footer .copyright{
+    width:100%;
+    text-align: center;
+    justify-content: center;
+    
+    
+}
+.containerr{
+    width: 100%;
+    
+    background-color:#f9e1ff;
+    display: flex;
+    align-items:center;
+    gap: 70px;
+    padding: 60px 40px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top:20px;
+    padding: 20px;
+    border-radius: 10px;
+
+}
+.hangman-box h1{
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.word-display{
+    display: flex;
+    gap: 10px;
+    list-style: none;
+align-items: center;
+justify-content: center;
+}
+.word-display .letter{
+    width: 28px;
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 40px;
+    border-bottom: 3px solid black;
+}
+.word-display .letter.guessed{
+    border-color: transparent;
+    margin: -40px 0 35px;
+}
+.game-box h4{
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+
+}
+.game-box h4 b{
+    font-weight: 600;
+}
+.game-box .guessed-text b{
+    color: rgb(207, 0, 0);
+
+}
+.game-box .keyboard{
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+:where(.game-modal, .keyboard) button {
+    color: antiquewhite;
+    font-weight: 600;
+    font-size: 1rem;
+    
+    border: none;
+    background-color: rgb(221, 182, 255);
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.keyboard button{
+    padding: 7px;
+    width: calc(100% / 9 - 5px);
+}
+:where(.game-modal, .keyboard) button:hover{
+    background-color: rgba(218, 179, 255, 0.744);
+}
+.keyboard button[disabled]{
+    opacity:0.6;
+    pointer-events: none;
+}
+
+.game-modal{
+    position:fixed;
+    opacity:0;
+    pointer-events: none;
+    z-index: 999;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100vh;
+   display:flex;
+   align-items: center;
+   justify-content: center;
+   transition: opacity 0.4s ease;
+   
+}
+.game-modal.show{
+    opacity:1;
+    pointer-events: auto;
+    
+}
+.hangman-box img{
+    width: 300px;
+    height: 350px;
+    border-radius: 30px;
+}
+.game-modal .content{
+    background: white;
+    max-width: 420px;
+    width: 100%;
+    text-align: center;
+    border-radius: 20px;
+    padding: 30px;
+}
+.game-modal img{
+    max-width: 130px;
+}
+.game-modal h4{
+    font-size: 1.13rem;
+    margin: 15px 0 30px;
+    font-weight: 500;
+}
+.game-modal p b {
+    color: rgb(174, 119, 225);
+    font-weight: 600;
+}
+.game-modal button{
+    padding: 12px 23px;
+
+}
+
+#tips {
+    background: linear-gradient(to right, rgb(225, 241, 255), rgb(191, 144, 255));
+    padding: 60px 40px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-radius: 20px;
+    margin-top: 70px;
+    top: 30px;
+}
+
+.tips-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    animation: fadeIn 1.5s ease-out;
+    
+}
+
+#tips h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #5c2f98; 
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    animation: highlightText 2s ease-out infinite alternate;
+}
+
+.description {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 40px;
+    font-weight: 400;
+}
+
+.tip-box {
+    background-color: #ffffff;
+    border: 2px solid #e1e1e1;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideIn 0.7s forwards;
+}
+
+.tip-box h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #5c2f98;
+    margin-bottom: 10px;
+}
+
+.tip-box p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.tip-box .tip-icon {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #5c2f98;
+    color: white;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 1.5rem;
+}
+
+.tip-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes highlightText {
+    0% {
+        color: #5c2f98;
+    }
+    50% {
+        color: #f170b9; 
+    }
+    100% {
+        color: #5c2f98;
+    }
+}
+
+@media (max-width: 768px) {
+    #tips h2 {
+        font-size: 2rem;
+    }
+    .tip-box {
+        padding: 15px;
+    }
+}
+.floating-icons {
+    position: absolute;
+    margin-top: 30px;
+}
+
+
+
+
+
+.icon8 {
+    width: 80px;
+    animation: float 3s infinite ease-in-out;
+    animation-delay: 3s;
+    position: absolute;
+    
+    top: -200px;
+    left: -350px;
+}
+
+.icon9 {
+    width: 80px;
+    animation: float 3s infinite ease-in-out;
+    animation-delay: 3s;
+    position: absolute;
+    top: -400px;
+    left: 30px;
+}
+
+
+
+
+
+
+.icon7 {
+    width: 80px;
+    animation: float 3s infinite ease-in-out;
+    animation-delay: 2s;
+    position: absolute;
+   right: -500px;
+    top: -140px;
+}
+
+.icon6 {
+    width: 80px;
+    animation: float 3s infinite ease-in-out;
+    animation-delay: 1s;
+    position: absolute;
+    left: -600px;
+    top: -250px;
+}
+
+
+.icon10 {
+    width: 90px;
+    animation: float 3s infinite ease-in-out;
+    animation-delay: 2s;
+    position: absolute;
+    left: 500px;
+    top: 80px;
+}
+
+.icon4 {
+    width: 80px;
+    animation: float 3s infinite ease-in-out;
+    animation-delay: 1s;
+    top: 160px;
+    left: -400px;
+    position: absolute;
+}
+
+.icon3 {
+    width: 80px;
+    animation: float 3s infinite ease-in-out;
+    animation-delay: 2s;
+    top:40px;
+    left: -600px;
+    position: absolute;
+}
+
+.icon2 {
+    width: 80px;
+    animation: float 3s infinite ease-in-out;
+    animation-delay: 1s;
+    top:160px;
+    left: 200px;
+    position: absolute;
+}
+
+.icon1 {
+    width: 80px;
+    animation: float 3s infinite ease-in-out;
+    top:-240px;
+    left: 200px;
+    animation-delay: 1s;
+    position: absolute;
+}
+
+
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+.hi{
+   background-color: #fad0e8;
+   height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-top: 30px;
+   border-radius: 20px;
+}
+.containir{
+    position: relative;
+    max-width: 600px;
+    width: 90%;
+    min-height: 250px;
+    background-color: #fbe9ff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 40px;
+}
+.containir h2{
+    font-size: 35px;
+    font-weight: 600;
+    text-align: center;
+    font-family: 'Dancing script', cursive;
+}
+.buttons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    border-top: 1px solid fad0e8;
+}
+.buttons button{
+    border-radius: 20px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background-color: #fad0e8;
+    color: #ffffff;
+    width: 150px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.buttons button:hover{
+    background-color: #ffb6df;
+    
+}
+.icons{
+    display: flex;
+    gap: 25px;
+}
+.icons i{
+font-size: 20px;
+cursor: pointer;
+}
+.ribbon{
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    position: absolute;
+}
+.ribbon::after,
+.ribbon::before{
+  position: absolute;
+  z-index: -1;
+  content: "";
+  display: block;
+  border: 5px solid fad0e8;
+}
+.ribbon span{
+    position: absolute;
+    width: 225px;
+    padding: 15px 0;
+    background-color: #ffbee3;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); 
+    color: #ffffff;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    font: 700 18px/1 "lato", sans-serif ;
+}
+.ribbon-top-left{
+    top:-10px;
+    left: -10px;
+}
+.ribbon-top-left::after,
+.ribbon-top-left::before{
+    border-top-color:transparent ;
+    border-left-color:transparent;
+}
+.ribbon-top-left::before{
+  top: 0;
+  left: 0;
+}
+.ribbon-top-left::after{
+    bottom: 0;
+    left: 0;
+}
+.ribbon-top-left span{
+    right: -25px;
+    top:30px;
+    transform: rotate(-45deg);
+}
+.quote div{
+    padding: 1rem 2.5rem;
+    font-size: 20px;
+}
+.quote .fa-quote-left,
+.quote .fa-quote-right{
+    font-size: 10px;
+    position: relative;
+    top: -8px;
+}
+.quote .author span,
+.favoriteList ul li .author span{
+    position: relative;
+    top: -6px;
+    left: -5px;
+    font-family: monospace;
+}
+.quote .author,
+.favoriteList ul li .author{
+    padding: 0;
+    margin-top: 1rem;
+    text-align: right;
+    font-style: italic;
+    font-size: 19px;
+}
+.favoriteList .fa-arrow-left-long{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+    font-size: 22px;
+}
+.favoriteList .fa-broom{
+    cursor: pointer;
+    font-size: 22px;
+    position: absolute;
+    bottom: 15px;
+}
+.favoriteList ul{
+    list-style-type: none;
+    padding: 2rem 1rem;
+}
+
+.favoriteList ul li{
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid #ffa9da;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
